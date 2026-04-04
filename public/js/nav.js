@@ -1,5 +1,5 @@
 /* ========================================
-   Church Check-In — Sidebar Navigation
+   Grace Gate Check-In — Sidebar Navigation
    ======================================== */
 
 function navItem(href, label, iconId, currentPath) {
@@ -71,7 +71,7 @@ function renderNav() {
             <rect x="7" y="20" width="10" height="2" rx="0.5"/>
           </svg>
         </div>
-        <div class="sidebar-title">Check-In</div>
+        <div class="sidebar-title">Grace Gate</div>
       </div>
       <nav class="sidebar-nav">
         ${navItem('/', 'Dashboard', 'grid-2x2', currentPath)}

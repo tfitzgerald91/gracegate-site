@@ -1,5 +1,5 @@
 /* ========================================
-   Church Check-In — Check In Page
+   Grace Gate Check-In — Check In Page
    ======================================== */
 
 // --- Mock Families (same data as families page) ---

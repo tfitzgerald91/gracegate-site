@@ -1,5 +1,5 @@
 /* ========================================
-   Church Check-In — Pickup Verification
+   Grace Gate Check-In — Pickup Verification
    ======================================== */
 
 // --- Session ---

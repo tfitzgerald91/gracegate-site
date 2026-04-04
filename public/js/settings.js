@@ -1,5 +1,5 @@
 /* ========================================
-   Church Check-In — Settings
+   Grace Gate Check-In — Settings
    ======================================== */
 
 // --- Defaults ---

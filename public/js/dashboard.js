@@ -1,5 +1,5 @@
 /* ========================================
-   Church Check-In — Dashboard
+   Grace Gate Check-In — Dashboard
    ======================================== */
 
 // --- Mock Data ---

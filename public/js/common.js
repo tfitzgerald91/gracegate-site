@@ -1,5 +1,5 @@
 /* ========================================
-   Church Check-In — Shared JavaScript
+   Grace Gate Check-In — Shared JavaScript
    ======================================== */
 
 // --- State ---

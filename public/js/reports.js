@@ -1,5 +1,5 @@
 /* ========================================
-   Church Check-In — Reports
+   Grace Gate Check-In — Reports
    ======================================== */
 
 // --- Mock Data ---
