@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Families — Church Check-In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+  <div class="app-layout">
+    <div id="nav-container"></div>
+
+    <div class="main-content">
+      <div class="page-header">
+        <div>
+          <h1>Families</h1>
+          <p class="subtitle" id="families-subtitle">Manage family records</p>
+        </div>
+        <div class="page-header-actions">
+          <button class="btn btn-primary" id="addFamilyBtn">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M7 1v12M1 7h12"/>
+            </svg>
+            Add Family
+          </button>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="search-bar" style="margin-bottom: 20px;">
+        <span class="search-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="7" cy="7" r="5"/>
+            <path d="M14 14l-3.5-3.5"/>
+          </svg>
+        </span>
+        <input type="text" id="familySearchInput" placeholder="Search by name or phone..." autocomplete="off" spellcheck="false">
+      </div>
+
+      <!-- Family List -->
+      <div class="card" id="family-list"></div>
+    </div>
+  </div>
+
+  <!-- Family Modal -->
+  <div class="modal-overlay" id="familyModal">
+    <div class="modal" style="max-width: 600px;">
+      <div class="modal-header">
+        <h2 id="modalTitle">Add Family</h2>
+        <button class="modal-close" id="modalCloseBtn">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer" id="modalFooter"></div>
+    </div>
+  </div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/families.js"></script>
+</body>
+</html>

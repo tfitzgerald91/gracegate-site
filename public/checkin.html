@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check In — Church Check-In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/common.css">
+  <style>
+    .checkin-family-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: box-shadow 0.2s ease;
+    }
+    .checkin-family-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+    .checkin-family-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+    .checkin-family-name {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+    .checkin-family-phone {
+      font-size: 13px;
+      color: var(--color-text-muted);
+    }
+    .checkin-child-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--color-border-light);
+      gap: 12px;
+    }
+    .checkin-child-row:last-child {
+      border-bottom: none;
+    }
+    .checkin-child-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      flex: 1;
+      min-width: 0;
+    }
+    .checkin-child-name {
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .checkin-child-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .security-code {
+      font-family: 'Courier New', monospace;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      background: var(--color-primary-light);
+      padding: 4px 14px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 2px;
+    }
+    .checked-in-indicator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--color-success);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .checked-in-indicator svg {
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-layout">
+    <div id="nav-container"></div>
+
+    <div class="main-content">
+      <div class="page-header">
+        <div>
+          <h1>Check In</h1>
+          <p class="subtitle">Search a family to check in children</p>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="search-bar" style="margin-bottom: 24px;">
+        <span class="search-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="7" cy="7" r="5"/>
+            <path d="M14 14l-3.5-3.5"/>
+          </svg>
+        </span>
+        <input type="text" id="checkinSearchInput" placeholder="Search family name or phone number..." autocomplete="off" spellcheck="false" style="font-size: 16px; padding: 14px 16px 14px 44px;">
+      </div>
+
+      <!-- Results -->
+      <div id="checkin-results"></div>
+    </div>
+  </div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/checkin.js"></script>
+</body>
+</html>

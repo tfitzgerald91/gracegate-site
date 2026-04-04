@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports — Church Check-In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+  <div class="app-layout">
+    <div id="nav-container"></div>
+
+    <div class="main-content">
+      <div class="page-header">
+        <div>
+          <h1>Reports</h1>
+          <p class="subtitle">Attendance history and family engagement</p>
+        </div>
+        <div class="page-header-actions">
+          <button class="btn btn-secondary btn-sm" id="exportCsvBtn">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 1v8M4 6l3 3 3-3"/>
+              <path d="M2 10v1.5A1.5 1.5 0 0 0 3.5 13h7a1.5 1.5 0 0 0 1.5-1.5V10"/>
+            </svg>
+            Export CSV
+          </button>
+        </div>
+      </div>
+
+      <!-- Date Filter Pills -->
+      <div id="filter-bar" style="display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;"></div>
+
+      <!-- Summary Stats -->
+      <div class="stat-cards" id="summary-stats"></div>
+
+      <!-- Session History -->
+      <div class="card mb-4" id="session-history" style="margin-bottom: 20px;"></div>
+
+      <!-- Session Detail Panel -->
+      <div id="session-detail" style="display: none; margin-bottom: 20px;"></div>
+
+      <!-- Family Attendance -->
+      <div class="card" id="family-attendance"></div>
+    </div>
+  </div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/reports.js"></script>
+</body>
+</html>
