@@ -24,7 +24,7 @@ function requirePairing() {
 
 function redirectIfPaired() {
   if (isPaired() && window.location.pathname.includes('pair')) {
-    window.location.href = '/';
+    window.location.href = '/dashboard';
     return true;
   }
   return false;
