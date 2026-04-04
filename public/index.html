@@ -546,15 +546,19 @@
 </footer>
 
 <script>
-function handleWaitlist(e) {
+async function handleWaitlist(e) {
   e.preventDefault();
   const email = document.getElementById('waitlist-email').value;
-  // POC: store locally. Production: send to Worker API → CloudKit/email service
-  const list = JSON.parse(localStorage.getItem('gg_waitlist') || '[]');
-  if (!list.includes(email)) {
-    list.push(email);
-    localStorage.setItem('gg_waitlist', JSON.stringify(list));
-  }
+  const btn = e.target.querySelector('button');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    await fetch('/api/waitlist', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+  } catch {}
   document.querySelector('.waitlist-form').style.display = 'none';
   document.getElementById('waitlist-success').style.display = 'block';
   return false;

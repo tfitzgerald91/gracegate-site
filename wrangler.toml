@@ -5,3 +5,7 @@ compatibility_flags = ["nodejs_compat"]
 
 [assets]
 directory = "public"
+
+[[kv_namespaces]]
+binding = "WAITLIST"
+id = "cecc77215a484b93a09c25c62bb476a0"
