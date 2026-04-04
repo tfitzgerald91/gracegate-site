@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Church Check-In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/common.css">
+</head>
+<body>
+  <div class="app-layout">
+    <div id="nav-container"></div>
+
+    <div class="main-content">
+      <div class="page-header">
+        <div>
+          <h1>Dashboard</h1>
+          <p class="subtitle" id="dashboard-subtitle">Sunday AM Service</p>
+        </div>
+        <div class="page-header-actions">
+          <button class="btn btn-secondary btn-sm" id="refreshBtn">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 7a6 6 0 0 1 10.5-4"/>
+              <path d="M13 7a6 6 0 0 1-10.5 4"/>
+              <path d="M11.5 1v2.5H9"/>
+              <path d="M2.5 13v-2.5H5"/>
+            </svg>
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      <!-- Stat Cards -->
+      <div class="stat-cards" id="stat-cards"></div>
+
+      <!-- Room Breakdown -->
+      <div class="card mb-4" id="room-breakdown" style="margin-bottom: 20px;"></div>
+
+      <!-- Bottom grid: Code Lookup + Activity Feed -->
+      <div class="grid-2" style="align-items: start;">
+        <div class="card" id="code-lookup"></div>
+        <div class="card" id="activity-feed"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/nav.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>

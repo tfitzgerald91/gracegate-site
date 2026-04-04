@@ -10,19 +10,13 @@ export default {
       });
     }
 
-    // Landing page at root
-    if (url.pathname === '/') {
-      url.pathname = '/landing.html';
-      return env.ASSETS.fetch(new Request(url, request));
-    }
-
-    // Dashboard routes — /dashboard maps to index.html (the paired dashboard)
+    // Dashboard route
     if (url.pathname === '/dashboard' || url.pathname === '/dashboard/') {
-      url.pathname = '/index.html';
+      url.pathname = '/dashboard.html';
       return env.ASSETS.fetch(new Request(url, request));
     }
 
-    // Static assets handled by wrangler
+    // Static assets handled by wrangler (/ serves index.html = landing page)
     return env.ASSETS.fetch(request);
   },
 };
