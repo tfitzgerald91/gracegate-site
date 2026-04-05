@@ -2,7 +2,7 @@ import { createHash, createSign } from 'node:crypto';
 
 // CloudKit configuration — Grace Gate Check-In container
 const CONTAINER = 'iCloud.com.gracegatecheckin.app';
-const ENVIRONMENT = 'production'; // Switch to 'development' for Xcode testing
+const ENVIRONMENT = 'development'; // TODO: switch to 'production' before launch
 const KEY_ID = '6682cc926b6f3a8b0b6222e4eb20354d2f790953258e07c9f18389a800ad8065';
 const CLOUDKIT_URL = `https://api.apple-cloudkit.com/database/1/${CONTAINER}/${ENVIRONMENT}/public/records/modify`;
 const CLOUDKIT_QUERY_URL = `https://api.apple-cloudkit.com/database/1/${CONTAINER}/${ENVIRONMENT}/public/records/query`;
